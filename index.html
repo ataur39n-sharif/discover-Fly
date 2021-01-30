@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!--icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <!--Header and Menu Section-->
+    <header class="container">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a class="active" href="#">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- part 1 -->
+
+    <!--Booking Section-->
+    <main id="section1" class="main-content container">
+
+        <div class="booking-form">
+            <h3>Booking Flights</h3>
+            <div class="input-group">
+                <label for="">Flying From</label>
+                <input class="inp-style" type="text" name="" placeholder="New York, United States">
+            </div>
+            <div class="input-group">
+                <label for="">Flying To</label>
+                <input class="inp-style" type="text" name="" placeholder="United States of NoaKhaki">
+            </div>
+            <div class="inputs">
+                <div class="input-group">
+                    <label" for="">Departure</label>
+                        <input class="inp-style" type="date" name="">
+                </div>
+                <div class="input-group">
+                    <label for="">Return</label>
+                    <input class="inp-style" type="date" name="">
+                </div>
+            </div>
+            <div class="input-group f-class">
+                <div>
+                    <label for="">First Class ($150)</label>
+                    <input id="firstClassSeatNumber" class="inp-style inp-width" type="number" name="" value="0">
+                </div>
+                <div class="plus-minus-btn">
+                    <p> <button onclick="btnClick('firstClassSeatNumber', true)"><i class="fas fa-plus"></i></button>
+                        <button onclick="btnClick('firstClassSeatNumber', false)"><i class="fas fa-minus"></i></button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="input-group f-class">
+                <div>
+                    <label for="">Economy ($100)</label>
+                    <input id="economyClassSeatNumber" class="inp-style inp-width" type="number" name="" value="0">
+                </div>
+                <div class="plus-minus-btn">
+                    <p><button onclick="btnClick('economyClassSeatNumber',true)"><i class="fas fa-plus"></i></button>
+                        <button onclick="btnClick('economyClassSeatNumber',false)"><i class="fas fa-minus"></i></button>
+                    </p>
+                </div>
+            </div>
+            <div class="calculations">
+                <div class="amount">
+                    <div class="left">
+                        <p>Subtotal</p>
+                    </div>
+                    <div class="right">
+                        <p id="subtotal">$0</p>
+                    </div>
+                </div>
+
+                <div class="amount">
+                    <div class="left">
+                        <p>Charge 10% VAT</p>
+                    </div>
+                    <div class="right">
+                        <p id="tax">$0</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="amount">
+                    <div class="left">
+                        <h4>Total</h4>
+                    </div>
+                    <div class="right">
+                        <p>$<span id="grandtotal">0</span></p>
+                    </div>
+                </div>
+            </div>
+            <button onclick="booknow()" class="btn-style">Book Now</button>
+        </div>
+
+        <div class="booking-content">
+            <h1>discover <br> around the world</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias
+                veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt
+                nobise
+                voluptatibus quam</p>
+        </div>
+
+
+
+        <!--JavaScript-->
+
+        <script src="script.js"></script>
+
+        <!--SweetAlert-->
+
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+        <!--Thank You-->
+    </main>
+
+    <!-- part 2 -->
+
+    <section id="section2" class="container">
+        <div class="d-flex justify-content-center align-content-center  m-auto p-auto w-100 h-100  bg-white text-dark ">
+            <table>
+                <tr>
+                    <th colspan="2">Name</th>
+                    <td class="float-right">Donald Trump</td>
+                </tr>
+                <tr>
+                    <th colspan="2">Origin</th>
+                    <td class="float-right">NewYork</td>
+                </tr>
+                <tr>
+                    <th colspan="2">Destination</th>
+                    <td class="float-right">United States of NoaKhaki</td>
+                </tr>
+                <tr>
+                    <th colspan="2">Number of FirstClass Ticket</th>
+                    <td id="FirstClassTicket" class="float-right">0</td>
+                </tr>
+                <tr>
+                    <th colspan="2">Number of Economy Ticket</th>
+                    <td id="EconomyTicket" class="float-right">0</td>
+                </tr>
+                <tr>
+                    <th colspan="2">Total Cost</th>
+                    <td id="cost" class="float-right">0</td>
+                </tr>
+            </table>
+
+        </div>
+        <button onclick="homeBtnClick()" class="btn btn-success"> Back To Home</button>
+    </section>
+
+</body>
+
+</html>
